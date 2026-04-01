@@ -16,7 +16,7 @@ public class ReportGenerator {
  List<String> reports = FileHandler.loadReports(REPORT_FILE);
  System.out.println("\n======= ACTIVITY REPORTS =======");
  if (reports.isEmpty()) {
- System.out.println(" Koi activity log nahi hai abhi.");
+ System.out.println(" No Activity Log ");
  return;
  }
  for (String r : reports) {
@@ -36,6 +36,6 @@ public class ReportGenerator {
  "\nCancelled : " + cancelledTickets +
  "\n==========================";
  FileHandler.appendReport(REPORT_FILE, summary);
- System.out.println("[Success] Summary report save ho gayi!");
+ System.out.println("[Success] Summary report Saved!");
  }
 }
