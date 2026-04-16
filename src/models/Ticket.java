@@ -1,4 +1,5 @@
 package models;
+
 public class Ticket {
     private String ticketId;
     private String username;
@@ -22,6 +23,9 @@ public class Ticket {
     public String getTicketId()       { return ticketId; }
     public String getUsername()       { return username; }
     public String getTrainId()        { return trainId; }
+    public String getTrainName()      { return trainName; }
+    public String getPassengerName()  { return passengerName; }
+    public String getJourneyDate()    { return journeyDate; }
     public String getStatus()         { return status; }
     public void   setStatus(String s) { this.status = s; }
 

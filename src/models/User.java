@@ -1,4 +1,5 @@
 package models;
+
 public class User {
     private String username;
     private String password;
@@ -18,7 +19,7 @@ public class User {
     {
         return username + "," + password + "," + role;
     }
-    public static User fromFileStrng(String line)
+    public static User fromFileString(String line)
     {
         String[] parts = line.split(",");
         return new User (parts[0], parts[1], parts[2]);
