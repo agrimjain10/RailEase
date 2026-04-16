@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>RailEase - Login</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div class="container">
+ <div class="card">
+ <h1>■ RailEase</h1>
+ <p class="subtitle">Train Ticket Booking System</p>
+ <div class="form-group">
+ <input type="text" placeholder="Username" id="username">
+ </div>
+ <div class="form-group">
+ <input type="password" placeholder="Password" id="password">
+ </div>
+ <button class="btn" onclick="login()">Login</button>
+ <p class="link">New user?
+ <a href="register.html">Register here</a>
+ </p>
+ </div>
+ </div>
+ <script>
+ function login() {
+ const u = document.getElementById('username').value;
+ if (u === 'admin') window.location.href = 'admin.html';
+ else window.location.href = 'dashboard.html';
+ }
+ </script>
+</body>
+</html>
