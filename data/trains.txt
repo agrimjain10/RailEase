@@ -1,0 +1,4 @@
+TR101,Shatabdi Express,New Delhi,Chandigarh,120,120,06:30
+TR102,Rajdhani Express,New Delhi,Mumbai Central,90,90,16:55
+TR103,Vande Bharat,Amritsar,Delhi Cantt,80,80,09:15
+TR104,Intercity Express,Lucknow,Varanasi,150,150,14:20

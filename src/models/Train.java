@@ -1,4 +1,5 @@
 package models;
+
 public class Train {
     private String trainId;
     private String trainName;
@@ -26,17 +27,29 @@ public class Train {
     public int    getTotalSeats()     { return totalSeats; }
     public int    getAvailableSeats() { return availableSeats; }
     public String getDepartureTime()  { return departureTime; }
+    public int getBookedSeats()       { return totalSeats - availableSeats; }
 
-    // BUG: > 1 hai, > 0 hona chahiye
-    // Matlab last seat kabhi book nahi hogi!
-    public void bookSeat() {
-        if (availableSeats > 1)
-            availableSeats--;
+    public int getOccupancyPercentage() {
+        if (totalSeats == 0) {
+            return 0;
+        }
+        return (getBookedSeats() * 100) / totalSeats;
     }
 
-    public void cancelSeat() {
-        if (availableSeats < totalSeats)
+    public boolean bookSeat() {
+        if (availableSeats > 0) {
+            availableSeats--;
+            return true;
+        }
+        return false;
+    }
+
+    public boolean cancelSeat() {
+        if (availableSeats < totalSeats) {
             availableSeats++;
+            return true;
+        }
+        return false;
     }
 
     public String toFileString() {
